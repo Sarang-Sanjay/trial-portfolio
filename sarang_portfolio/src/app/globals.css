@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+  --terminal-green: #00ff41;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'JetBrains Mono', monospace, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+.crt-flicker {
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.97; }
+  5% { opacity: 0.95; }
+  10% { opacity: 0.9; }
+  15% { opacity: 0.98; }
+  20% { opacity: 0.95; }
+  25% { opacity: 0.96; }
+  30% { opacity: 0.9; }
+  35% { opacity: 0.95; }
+  40% { opacity: 0.9; }
+  45% { opacity: 0.95; }
+  50% { opacity: 0.98; }
+  55% { opacity: 0.95; }
+  60% { opacity: 0.9; }
+  65% { opacity: 0.95; }
+  70% { opacity: 0.9; }
+  75% { opacity: 0.98; }
+  80% { opacity: 0.95; }
+  85% { opacity: 0.96; }
+  90% { opacity: 0.9; }
+  95% { opacity: 0.95; }
+  100% { opacity: 0.98; }
+}

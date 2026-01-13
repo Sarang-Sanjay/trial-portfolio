@@ -1,0 +1,21 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Sarang Sanjay | Portfolio",
+  description: "Personal portfolio of Sarang Sanjay",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className="font-mono antialiased">
+        {children}
+      </body>
+    </html>
+  );
+}
